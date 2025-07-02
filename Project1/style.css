@@ -10,3 +10,18 @@ body {
     max-width: 1440px !important;
   }
 }
+
+.symbol{
+  background-image: url("images/right-symbol.svg");
+  background-repeat: no-repeat;
+}
+
+.plus-shape{
+  background-image: url("images/plus-shape.svg");
+  background-repeat: no-repeat;
+}
+
+.minus-shape{
+  background-image: url("images/minus-shape.svg");
+  background-repeat: no-repeat;
+}
