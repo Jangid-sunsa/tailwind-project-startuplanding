@@ -29,44 +29,42 @@
     <!-- Contact details section starts here -->
     <section class="bg-[#FFF7F5] py-15 my-5">
         <div class="container mx-auto px-4">
-            <div class="flex gap-5 py-8 px-2">
-                <img class="text-xl text-[#1F1F1F] mt-2 md:text-3xl lg:text-4xl " src="images/under-line.svg" alt="underline">
-                <h2  class="text-xl text-[#1F1F1F] font-semibold md:text-3xl lg:text-4xl">Contact us</h2>
+            <div class="flex gap-5 py-4 px-4">
+                <img class="hidden md:hidden lg:block mt-2" src="images/under-line.svg" alt="underline">
+                <h2 class="text-xl w-full text-center font-semibold md:text-center text-3xl lg:text-start text-[#1F1F1F]">Contact us</h2>
             </div>
-           <div class="grid sm:grid-cols-12 gap-5 mt-5">
-            <div class="col-span-4">
-                <div class="flex gap-8">
-                <img src="images/address.svg" alt="address-logo">
-                <div class="text-3xl font-semibold text-[#1F1F1F]">Address</div>
-                </div>
-                <p class="text-[#545454] text-xl">Jaipur Rajasthan INDIA </p>
-                <p class="text-[#545454] text-xl">Pin 342087</p>
+           <div class="grid sm:grid-cols-9 flex mt-20 gap-10 items-center">
+            <div class="col-span-3 flex gap-5 px-3">
+              <img src="images/address.svg" alt="address-icon"/>
+              <div class="flex-col">
+                <h2 class="text-xl font-regular py-2 md:text-2xl font-medium lg:text-3xl font-bold text-[#1F1F1F]">Address</h2>
+                <p class="text-sm md:text-base lg:text-xl text-[#545454]">Jaipur Rajasthan INDIA </p>
+                <p class="text-sm md:text-base lg:text-xl text-[#545454]">Pin 342087</p>
+              </div>
             </div>
-
-            <div class="col-span-4">
-                <div class="flex gap-8">
-                <img src="images/call.svg" alt="call-logo">
-                <div class="text-3xl font-semibold text-[#1F1F1F]">Call us</div>
-                </div>
-                <p class="text-[#545454] text-xl">+91 98765 43210 </p>
+            <div class="col-span-3 flex gap-5 px-3">
+              <img src="images/call.svg" alt="caller-icon"/>
+              <div class="flex-col">
+                <h2 class="text-xl font-regular py-2 md:text-2xl font-medium lg:text-3xl font-bold text-[#1F1F1F]">Call us</h2>
+                <p class="text-sm md:text-base lg:text-xl text-[#545454]">+91 98765 43210</p>
+              </div>
             </div>
-
-            <div class="col-span-4">
-                <div class="flex gap-8">
-                <img src="images/email.svg" alt="email-logo">
-                <div class="text-3xl font-semibold text-[#1F1F1F]">Email</div>
-                </div>
-                <p class="text-[#545454] text-xl">info@test.com</p>
+            <div class="col-span-3 flex gap-5 px-3">
+              <img src="images/email.svg" alt="emailbox-icon"/>
+              <div class="flex-col">
+                <h2 class="text-xl font-regular py-2 md:text-2xl font-medium lg:text-3xl font-bold text-[#1F1F1F]">Email us</h2>
+                <p class="text-sm md:text-base lg:text-xl text-[#545454]">info@test.com</p>
+              </div>
             </div>
-           </div>  
+          </div>  
           </div>
     </section>
 
     <!-- Contact form section is starts here -->
     <section id="register">
         <div class="container mx-auto px-4 mt-10">
-            <h1 class="text-4xl text-center font-semibold text-[#2E2F35] py-4">Get in touch with us. <br> We're here to assist you.</h1>
-            <div class="md:px-10 lg:px-20">
+            <h1 class="text-xl py-2 md:text-3xl py-3 text-4xl py-4 text-center font-semibold text-[#2E2F35]">Get in touch with us. <br> We're here to assist you.</h1>
+            <!-- <div class=""> -->
                 <form action="#" class="bg-[#F1F3F7] py-10 my-10 rounded-xl">
                     <div class="flex flex-wrap px-5 mx-3 mb-6">
                         <div class="w-full md:w-1/2 px-4 my-6 md:mb-0">
@@ -148,8 +146,8 @@
                             </div>
                         </div>                        
                     </div>
-                    <div class="md:w-1/2 mx-10 my-6 md:mb-0 lg:w-full md:w-1/2 mx-10 my-6 md:mb-0">
-                        <button class="bg-[#28DDB2] text-white py-4 px-20 mb-10" type="submit">Submit Information</button>
+                    <div class="w-xs md:w-1/2 mx-10 my-6 md:mb-0 lg:w-full md:w-1/2 mx-10 my-6 md:mb-0">
+                        <button class="bg-[#28DDB2] text-white py-4 px-10  md:px-15 lg:px-20 mb-10" type="submit">Submit Information</button>
                     </div>
                 </form>
             </div>
@@ -163,45 +161,51 @@
     
     <!-- Subscribe Section starts here -->
     <section class="bg-[#FFF7F5]">
-        <div class="container mx-auto px-4 border border-blue=100 ">
+        <div class="container mx-auto px-4">
             <div>
-                <h1 class="text-center text-6xl font-semibold text-[#1F1F1F] px-4 py-20 leading-18">Subscribe to Our Newsletter <br> for Design Insights</h1>
-                <p class="text-center text-2xl text-[#545454] font-medium leading-10 px-4 my-10">Be the first to discover trends, inspirations, and special offers as we <br> bring the world of design directly to your inbox</p>
+                <h1 class="text-center text-xl md:text-2xl lg:text-4xl font-semibold text-[#1F1F1F] px-4 pt-10 pb-5 leading-snug">Subscribe to Our Newsletter <br> for Design Insights</h1>
+                <p class="text-center text-lg md:text-xl lg:2xl text-[#545454] leading-snug px-4 pb-10">Be the first to discover trends, inspirations, and special offers as we <br> bring the world of design directly to your inbox</p>
             </div>
-            <div class="grid grid-cols-4 py-5 mb-20 bg-white mx-50 rounded-sm border-black">
-                <div class="col-span-2"></div>
-                <div class="col-span-2"></div>
-                   
+            <div class="max-w-2xl mx-auto pb-15">
+              <form class="grid grid-cols-1 sm:grid-cols-[1fr_auto] bg-white rounded-md ">
+                <div class="flex items-center px-4 py-3">
+                  <img src="images/email-mini.svg" alt="email-mini-icon">
+                  <input type="email" placeholder="Enter your email address" class="ps-5 w-full outline-none text-sm text-gray-700 placeholder-gray-400 bg-transparent" required />
+                </div>
+                <button type="reset" class="bg-[#28DDB2] text-white font-semibold px-6 py-3 text-sm cursor-pointer rounded-md">
+                  Subscribe
+                </button>
+              </form>
             </div>
         </div>
     </section>
 
     <!-- Accordian section starts here -->
     <div class="container mx-auto px-4 my-20">
-        <h3 class="text-center text-3xl pt-10 font-medium text-[#0F2137]">Do you have any quesiton</h3>
-        <p class="text-center py-4 text-base text-[#0F2137]">Our support team ready to help you, please contact with them</p>
+        <h3 class="text-center text-xl md:text-2xl lg:3xl pt-10 font-medium text-[#0F2137]">Do you have any quesiton</h3>
+        <p class="text-center py-4 text-sm md:text-sm lg:text-base text-[#0F2137]">Our support team ready to help you, please contact with them</p>
         <ul class="my-10">
         <span class="">
-            <li class="border-b border-black plus-shape text-start ps-10 my-4">How to contact with riders emergency ?</li>
+            <li class="font-medium md:font-semibold lg:font-semibold border-b border-black plus-shape text-start pb-4 ps-10 my-4">How to contact with riders emergency ?</li>
         </span>
         <span class="">
-            <li class="border-b border-black plus-shape text-start ps-10 my-4">App installation failed, how to update system information?</li>
+            <li class="font-medium md:font-semibold lg:font-semibold border-b border-black plus-shape text-start pb-4 ps-10 my-4">App installation failed, how to update system information?</li>
         </span>
         <span class="">
-            <li class=" minus-shape text-start ps-10 my-4">Website reponse taking time, how to improve?</li>
-            <p class="border-b border-black ps-10">Get your blood tests delivered at the home collect a sample from management news. Get your <br> blood tests delivered at the home collect a sample from management news. Get your blood <br> tests delivered at the home collect a sample from management news. Get your blood tests <br> delivered at the home.</p>
+            <li class="font-medium md:font-semibold lg:font-semibold minus-shape text-start pb-4 ps-10 my-4">Website reponse taking time, how to improve?</li>
+            <p class="border-b border-black ps-10 pb-4">Get your blood tests delivered at the home collect a sample from management news. Get your <br> blood tests delivered at the home collect a sample from management news. Get your blood <br> tests delivered at the home collect a sample from management news. Get your blood tests <br> delivered at the home.</p>
         </span>
         <span class="">
-            <li class="border-b border-black plus-shape text-start ps-10 my-4">New update fixed all bug and issues</li>
+            <li class="font-medium md:font-semibold lg:font-semibold border-b border-black plus-shape text-start pb-4 ps-10 my-4">New update fixed all bug and issues</li>
         </span>
         </ul>
     </div>
 
-    <!-- Footer section starts here -->
+ <!-- Footer section starts here -->
     <footer class="bg-[#F9FAFC] pb-30">
     <div class="container mx-auto border-b border-black">
-      <div class="grid grid-cols-1 text-center md:grid-cols-3 lg:grid-cols-5 text-start mt-20 gap-8 px-4">
-        <div class="my-5">
+      <div class="grid grid-cols-1 text-center md:grid-cols-3 lg:grid-cols-5 text-start mt-20 px-4">
+        <div class="my-3 px-8">
           <div class="text-lg text-[#0F2137] font-medium mb-5">Company</div>
           <ul class="leading-4">
             <li class="text-[#02073E] text-sm mb-1"><a href="#">About</a></li>
@@ -212,7 +216,7 @@
           </ul>
         </div>
 
-        <div class="my-5">
+        <div class="my-3 px-8">
           <div class="text-lg text-[#0F2137] font-medium mb-5">About Us</div>
           <ul class="leading-4">
             <li class="text-[#02073E] text-sm mb-1"><a href="#">Support Center</a></li>
@@ -223,7 +227,7 @@
           </ul>
         </div>
 
-        <div class="my-5">
+        <div class="my-3 px-8">
           <div class="text-lg text-[#0F2137] font-medium mb-5">Our Information</div>
           <ul class="leading-4">
             <li class="text-[#02073E] text-sm mb-1"><a href="#">Return Policy</a></li>
@@ -234,7 +238,7 @@
           </ul>
         </div>
 
-        <div class="my-5">
+        <div class="my-3 px-8">
           <div class="text-lg text-[#0F2137] font-medium mb-5">My Account</div>
           <ul class="leading-4">
             <li class="text-[#02073E] text-sm mb-1"><a href="#">Press Inquiries</a></li>
@@ -245,7 +249,7 @@
           </ul>
         </div>
 
-        <div class="my-5">
+        <div class="my-3 px-8">
           <div class="text-lg text-[#0F2137] font-medium mb-5">Policy</div>
           <ul class="leading-4">
             <li class="text-[#02073E] text-sm mb-1"><a href="#">Application security</a></li>
@@ -260,13 +264,13 @@
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8 items-center mt-5">
         <div class="col-span-12 gap-5 md:col-span-6 lg:col-span-6">
-          <div class="flex items-center">
+          <div class="flex flex-col md:flex-col lg:flex-row items-start">
             <img src="images/logo.svg" alt="Company-logo">
-            <p class="text-sm text-[#0F2137] ">Copyright by 2025 Sunil Inc</p>
+            <p class="text-sm text-center ps-4 pt-3 md:text-sm px-4 pt-1 text-center lg:text-base mt-0 text-[#0F2137]">Copyright by 2025 Sunil Inc</p>
           </div>
         </div>
-        <div class="col-span-12 gap-5 md:col-span-6 lg:col-span-6">
-          <p class="text-end text-base text-[#02073E]"><a href="#">Home | Adversite | Supports | Marketing | FAQ</a></p>
+        <div class="col-span-12 gap-5 md:col-span-6 lg:col-span-6 ">
+          <p class="text-center md:text-center lg:text-end text-base text-[#02073E]"><a href="#">Home | Adversite | Supports | Marketing | FAQ</a></p>
         </div>
       </div>
     </div>
