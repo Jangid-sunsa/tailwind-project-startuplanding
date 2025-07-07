@@ -6,28 +6,49 @@
     <title>startup-landing</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   </head>
   <body>
-    <!-- Navbar section starts here-->
-    <header>
-      <div class="container mx-auto px-5">
-        <div class="flex py-2 md:py-5 justify-between items-center font-medium my-5">
-          <img class="" src="images/logo.svg" alt="log" />
-          <ul class="sm:flex lg:gap-10 md:gap-6 text-base hidden">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="contact.html">Support</a></li>
-            <li><a href="\contact.html" target="_blank">Register</a></li>
-
-            <li class="text-[#28DCB2]">
-              <a href="#">Get Started</a>
-              <img src="images/Path 49.svg" alt="underline" />
-            </li>
-          </ul>
+      <!-- Navbar Starts here -->
+      <header>
+        <div class="container mx-auto mt-6 px-4">
+          <nav class="p-3 flex justify-between items-center my-4">
+            <a href="#" id="brand" class="flex gap-2 items-center border">
+               <img class="object-cover" src="images/logo.svg" alt="logo">
+            </a>
+            <div id="nav-menus" class="flex hidden lg:flex gap-12">
+               <a href="#" class="font-medium hover:text-green-700">Pricing</a>
+               <a href="contact.html" class="font-medium hover:text-green-700">Support</a>
+               <a href="#" class="font-medium hover:text-green-700">Register</a>
+               <a href="index.html" class="font-medium hover:text-green-700">Get Started
+                   <img src="images/Path 49.svg" alt="underline" />
+               </a> 
+            </div>
+       
+            <!-- hamburger button is starts here -->
+              <button class="p-3 md:hidden" onclick="handleMenu()">
+                  <i class="fa-solid fa-bars text-black text-2xl border"></i>
+              </button>
+             <div id="nav-dialog" class="hidden fixed z-10 my-4 lg:hidden bg-white inset-0 p-6">
+                <div id="nav-bar" class="flex justify-between border">
+                    <a href="#" id="bran" class="flex gap-2 items-center">
+                        <img class="object-cover" src="images/logo.svg" alt="logo">
+                    </a>
+                    <button class="p-2 border md:hidden " onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-black text-2xl"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col mt-5">
+                    <a href="#" class="font-medium mx-2 px-3 py-2 hover:bg-gray-100 block rounded-sm">Pricing</a>
+                    <a href="contact.html" class="font-medium mx-2 px-3 py-2 hover:bg-gray-100 block rounded-sm">Support</a>
+                    <a href="#" class="font-medium mx-2 px-3 py-2 hover:bg-gray-100 block rounded-sm">Register</a>
+                    <a href="index.html" class="font-medium mx-2 px-3 py-2 hover:bg-gray-100 block rounded-sm">Get Started</a>
+                </div>
+            </div>
+          </nav>
         </div>
-      </div>
-    </header>
-
+      </header>
+    
     <!-- Header section starts here -->
     <section class="md:mt-10 lg:mt-15 mb-5 md:mb-10 lg:mb-15">
       <div class="container mx-auto px-5">
@@ -87,7 +108,7 @@
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-20 gap-8">
-        <div class="shadow-lg py-6 text-center md:text center lg:text-start">
+        <div class="py-6 text-center md:text center lg:text-start">
           <img src="images/fast.svg" class="mx-auto md:mx-auto lg:ms-0" alt="fast-performance" />
           <h5 class="py-3 px-4 text-lg text-[#0F2137] font-medium">
             Fast-Performance
@@ -97,7 +118,7 @@
             spending money in real.
           </p>
         </div>
-        <div class="shadow-lg py-6 text-center md:text center lg:text-start">
+        <div class="py-6 text-center md:text center lg:text-start">
           <img src="images/best.svg" class="mx-auto md:mx-auto lg:ms-0" alt="best-strategy" />
           <h5 class="py-3 px-5 text-lg text-[#0F2137] font-medium">
             Best Strategy
@@ -107,7 +128,7 @@
             wire, check, or ACH.
           </p>
         </div>
-        <div class="shadow-lg py-6 text-center md:text center lg:text-start">
+        <div class="py-6 text-center md:text center lg:text-start">
           <img src="images/boost.svg" class="mx-auto md:mx-auto lg:ms-0" alt="boost-performance" />
           <h5 class="py-3 px-5 text-lg text-[#0F2137] font-medium">
             Boost Performance
@@ -117,7 +138,7 @@
             formality level.
           </p>
         </div>
-        <div class="shadow-lg py-6 text-center md:text center lg:text-start">
+        <div class="py-6 text-center md:text center lg:text-start">
           <img src="images/award.svg" class="mx-auto md:mx-auto lg:ms-0" alt="award-history" />
           <h5 class="py-3 px-5 text-lg text-[#0F2137] font-medium">
             Award History
@@ -168,8 +189,8 @@
 
             <!-- content section start here -->
             <div>
-                <div class="flex justify-center md:justify-start lg:justify-start">
-                  <h2 class="text-[20px] md:text-[30px] px-4 text-start lg:text-[36px] text-start font-medium text-gray-800 leading-snug">
+                <div class="flex md:justify-start lg:justify-start">
+                  <h2 class="text-[20px] text-center md:text-[30px] px-4 text-start lg:text-[36px] text-start font-medium text-gray-800 leading-snug">
                     Smart Jackpots <br class="hidden md:hidden lg:block" />
                     that you may love this anytime <br class="hidden md:hidden lg:block" />
                     & anywhere
@@ -234,7 +255,7 @@
       <div class="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8 items-center mt-5">
         <div class="col-span-12 gap-5 md:col-span-6 lg:col-span-6">
           <!-- Card1 -->
-          <div class="flex flex-wrap items-center px-6 pb-4 shadow-lg mb-5 lg:flex shadow-lg mb-5">
+          <div class="flex flex-wrap items-center px-6 pb-4 mb-5 lg:flex mb-5">
             <div  class="mx-auto md:mx-auto lg:ms-0">
               <img src="images/fast.svg" alt="fast-performance" />
             </div>
@@ -253,7 +274,7 @@
           </div>
           <!-- Card2 -->
           <div
-            class="flex flex-wrap items-center px-6 pb-4 shadow-lg mb-5 lg:flex shadow-lg mb-5"
+            class="flex flex-wrap items-center px-6 pb-4 mb-5 lg:flex mb-5"
           >
             <div  class="mx-auto md:mx-auto lg:ms-0">
               <img src="images/partnership.svg" alt="partnership-deal" />
@@ -275,7 +296,7 @@
         <!-- Card3 -->
         <div class="col-span-12 gap-5 md:col-span-6 lg:col-span-6">
           <div
-            class="flex flex-wrap items-center px-6 pb-4 shadow-lg mb-5 lg:flex shadow-lg mb-5"
+            class="flex flex-wrap items-center px-6 pb-4 mb-5 lg:flex mb-5"
           >
             <div  class="mx-auto md:mx-auto lg:ms-0">
               <img src="images/pro-subscription.svg" alt="pro-subscription" />
@@ -296,7 +317,7 @@
           </div>
           <!-- Card4 -->
           <div
-            class="flex flex-wrap items-center px-6 pb-4 shadow-lg mb-5 lg:flex shadow-lg mb-5"
+            class="flex flex-wrap items-center px-6 pb-4 mb-5 lg:flex mb-5"
           >
             <div  class="mx-auto md:mx-auto lg:ms-0">
               <img src="images/customer-support.svg" alt="customer-support" />
@@ -318,9 +339,9 @@
     </div>
 
     <!-- Ultimate widgets parts start here -->
-    <section class="bg-[#FFF7F5] mt-10 md:mt-15 lg:mt-20">
+    <section class="bg-[#FFF7F5] mt-10 md:mt-15 lg:mt-20 my-10">
       <div class="container mx-auto">
-        <div class="grid grid-cols-12 gap-3 my-2 md:gap-5 lg:gap-6 px-5 my-6">
+        <div class="grid grid-cols-12 gap-3 md:gap-5 lg:gap-6 px-5">
           <div class="col-span-12 gap-3 md:col-span-6 lg:col-span-6 my-10">
             <img src="images/ultimate.svg" alt="ultimate-widgets" />
           </div>
@@ -370,10 +391,10 @@
         end you can export in one click into your preferred format.
       </p>
       <div class="bg-gray-200 mx-auto p-2 mt-10 justify-between items-center rounded-sm w-3xs relative">
-        <button class="bg-white text-base text-[#0F2137] font-medium p-2 rounded-sm">
+        <button class="hover:bg-white text-base text-[#0F2137] font-medium p-2 rounded-sm cursor-pointer">
           Monthly Plan
         </button>
-        <button class="text-base text-[#0F2137] font-medium p-2">
+        <button class="hover:bg-white text-base text-[#0F2137] font-medium p-2 cursor-pointer">
           Annual Plan
         </button>
         <button class="bg-[#36CDA4] text-xs text-white font-medium absolute bottom-11 left-40 rounded-xl w-[85px] h-[28px]">
@@ -381,11 +402,11 @@
         </button>
       </div>
 
-      <div class="max-w-[960px] mx-auto mt-10">
+      <div class="max-w-[940px] mx-auto mt-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
 
       <!-- Free Plan -->
-          <div class="bg-white border-2 border-gray-300 hover:border-green-500 rounded-lg shadow-md p-6 flex flex-col justify-between">
+          <div class="bg-white border-2 border-gray-300 hover:border-green-500 rounded-lg p-6 flex flex-col justify-between">
             <div>
               <h3 class="text-xl font-bold text-[#0F2137]">Free Plan</h3>
               <p class="text-sm text-[#0F2137] mt-1">For Small teams or office</p>
@@ -418,8 +439,8 @@
 
               </ul>
             </div>
-            <div class="flex items-center justify-center px=auto">
-              <button class="text-base font-semibold text-[#EF9E48] bg-orange-100 px-4 py-2 my-5 rounded-sm">
+            <div class="flex items-center justify-center px-auto">
+              <button class="text-base font-semibold text-[#EF9E48] bg-orange-100 px-4 py-2 my-5 rounded-sm cursor-pointer">
                 Start free trail 
               </button>
             </div>
@@ -427,15 +448,15 @@
 
           <!-- Premium Plan -->
           <div class="bg-white border-2 border-gray-300 hover:border-green-500 rounded-lg p-6 flex flex-col justify-between relative">
+            <span class="bg-[#EF9E48] text-white font-bold text-sm text-centermx-auto md:text-xs text-white mx-auto lg:text-xs px-2 py-1 text-start rounded mb-4 me-[300px]">Recommended</span>
             <div class="flex justify-between items-start mb-4">
-              <!-- <span class="bg-orange-100 text-orange-600 text-xs font-medium px-2 py-1 rounded">Recommended</span> <br -->
               <div class="text-left">
                   <h3 class="text-xl font-bold text-[#0F2137]">Premium</h3>
               <p class="text-sm text-[#0F2137] mt-1">For startup enterprise</p>
               </div>
               <div class="text-right">
                 <p class="text-sm text-[#0F2137]">Starting from</p>
-                <p class="text-2xl font-semibold text-green-500">49.99<span class="text-sm font-normal">/mo</span></p>
+                <p class="text-2xl font-semibold text-[#25CB9E]">49.99<span class="text-sm font-normal">/mo</span></p>
               </div>
             </div>
 
@@ -470,7 +491,7 @@
             </div>
 
             <div class="flex items-center justify-center px=auto">
-              <button class="text-base font-semibold text-[#EF9E48] bg-orange-100 px-4 py-2 my-5 rounded-sm">
+              <button class="text-base font-semibold text-[#EF9E48] bg-orange-100 px-4 py-2 my-5 rounded-sm cursor-pointer">
                 Subscribe Now
               </button>
             </div>
@@ -487,7 +508,7 @@
       <p class="text-center py-4 text-base text-[#0F2137]">
         Our support team ready to help you, please contact with them
       </p>
-      <div class="max-w-[580px] mx-auto">
+      <div class="max-w-[580px] mx-auto px-4">
         <ul class="my-10">
           <span class="">
             <li class="border-b border-[#E5ECF4] plus-shape text-start ps-10 pb-5 my-4">
@@ -523,78 +544,88 @@
     </div>
 
 <!-- Footer section starts here -->
-    <footer class="bg-[#F9FAFC] pb-30">
-    <div class="container mx-auto border-b border-black">
-      <div class="grid grid-cols-1 text-center md:grid-cols-3 lg:grid-cols-5 text-start mt-20 px-4">
-        <div class="my-3 px-8">
+  <footer class="bg-[#F9FAFC]">
+    <div class="container mx-auto border-b border-[#E5ECF4] py-15">
+      <div class="grid grid-cols-1 text-center md:grid-cols-3 lg:grid-cols-5 text-start px-4">
+        <div class="px-6 md:px-6 lg:px-0">
           <div class="text-lg text-[#0F2137] font-medium mb-5">Company</div>
-          <ul class="leading-4">
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">About</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Affiliate</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Careers & Culture</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Blog</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Press</a></li>
+          <ul>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">About</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Affiliate</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Careers & Culture</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Blog</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Press</a></li>
           </ul>
         </div>
-
-        <div class="my-3 px-8">
+        <div class="px-6 md:px-6 lg:px-0">
           <div class="text-lg text-[#0F2137] font-medium mb-5">About Us</div>
-          <ul class="leading-4">
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Support Center</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Cutomer Support</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">About Us</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Copyright</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Popular Campaign</a></li>
+          <ul>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Support Center</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Cutomer Support</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">About Us</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Copyright</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Popular Campaign</a></li>
           </ul>
         </div>
-
-        <div class="my-3 px-8">
+        <div class="px-6 md:px-6 lg:px-0">
           <div class="text-lg text-[#0F2137] font-medium mb-5">Our Information</div>
-          <ul class="leading-4">
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Return Policy</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Privacy Policy</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Terms & Conditions</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Site Map</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Store Hours</a></li>
+          <ul>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Return Policy</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Privacy Policy</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Terms & Conditions</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Site Map</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Store Hours</a></li>
           </ul>
         </div>
-
-        <div class="my-3 px-8">
+        <div class="px-6 md:px-6 lg:px-0">
           <div class="text-lg text-[#0F2137] font-medium mb-5">My Account</div>
-          <ul class="leading-4">
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Press Inquiries</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Social Media</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Directories</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Images & B-roll</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Permissions</a></li>
+          <ul>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Press Inquiries</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Social Media</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Directories</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Images & B-roll</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Permissions</a></li>
           </ul>
         </div>
-
-        <div class="my-3 px-8">
+        <div class="px-6 md:px-6 lg:px-0">
           <div class="text-lg text-[#0F2137] font-medium mb-5">Policy</div>
-          <ul class="leading-4">
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Application security</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Software principles</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Unwanted software policy</a></li>
-            <li class="text-[#02073E] text-sm mb-1"><a href="#">Responsible supply chain</a></li>
+          <ul>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Application security</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Software principles</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Unwanted software policy</a></li>
+            <li class="text-[#02073E] text-sm mb-3"><a href="#">Responsible supply chain</a></li>
           </ul>
         </div>
       </div>
     </div>
-
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8 items-center mt-5">
+    <div class="container mx-auto px-4 my-5">
+      <div class="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8 items-center my-5">
         <div class="col-span-12 gap-5 md:col-span-6 lg:col-span-6">
-          <div class="flex flex-col md:flex-col lg:flex-row items-start">
+          <div class="flex flex-col md:flex-col lg:flex-row items-center md:items-start lg:items-center">
             <img src="images/logo.svg" alt="Company-logo">
-            <p class="text-sm text-center ps-4 pt-3 md:text-sm px-4 pt-1 text-center lg:text-base mt-0 text-[#0F2137]">Copyright by 2025 Sunil Inc</p>
+            <p class="text-sm text-center ps-4 md:text-sm px-4 text-center lg:text-base text-[#0F2137]">Copyright by 2025 Sunil Inc</p>
           </div>
         </div>
-        <div class="col-span-12 gap-5 md:col-span-6 lg:col-span-6 ">
-          <p class="text-center md:text-center lg:text-end text-base text-[#02073E]"><a href="#">Home | Adversite | <a href="contact.html">Supports</a> | Marketing | FAQ</a></p>
+        <div class="col-span-12 md:col-span-6 lg:col-span-6">
+          <nav class="flex justify-center md:justify-center lg:justify-end gap-x-4 text-base text-[#02073E]">
+            <a href="index.html">Home</a>
+            <a href="#">Adversite</a>
+            <a href="contact.html">Supports</a>
+            <a href="#">Marketing</a>
+            <a href="#">FAQ</a>
+          </nav>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Javascript starts here -->
+  <script>
+    const navDialog = document.getElementById("nav-dialog");
+    function handleMenu() {
+      navDialog.classList.toggle("hidden");
+    }
+  </script>
+
   </body>
 </html>
