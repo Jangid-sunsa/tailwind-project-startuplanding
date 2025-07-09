@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sevillana&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1440px !important;
+  }
+}
+
+.symbol{
+  background-image: url("images/right-symbol.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.ul li{
+  background-image: url("images/right-symbol.svg");
+  background-repeat: no-repeat;
+  padding-left: 20;
+}
+
+.close{
+  background-image: url("images/close.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.plus-shape{
+  background-image: url("images/plus-shape.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.minus-shape{
+  background-image: url("images/minus-shape.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  accent-color: #28DDB2; 
+}
+
+
+
