@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sevillana&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding: 0;
+            margin-top: 150px;
+        }
+
+
+         .accordion-body{
+            max-width: 760px;
+            height: auto;
+            margin: auto;
+            border: 2px dashed blue;
+            justify-items: center;
+        }
+
+        .heading{
+            padding-top: 10px;
+            text-align: center;
+            color: #0F2137;
+            font-weight: 400;
+            font-size: 30px;
+        }
+
+        .sub-heading{
+            padding: 4px;
+            font-size: 16px;
+            color: #0F2137;
+        }
+
+        .plus-shape{
+            /* width: 20px; */
+            height: 20px;
+            padding-right: 20px;
+        }
+
+        .minus-shape{
+            width: 20px;
+            height: 20px;
+            padding-right: 20px;
+        }
+
+        .accordion {
+          border: 1px solid #E5ECF4;
+          cursor: pointer;
+          padding: 20px;
+          width: 100%;
+          text-align: left;
+          font-size: 20px;
+          transition: 0.4s;
+        }
+
+        .panel {
+          padding: 0 20px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+        }
+
+        .panel-text{
+            padding-left: 40px;
+            font-size: 18px;
+            color: #343D48;
+            line-height: 42px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="accordion-body">
+        <h2 class="heading">Do you have any quesiton</h2>
+        <p class="sub-heading">Our support team ready to help you, please contact with them</p>
+
+        <button class="accordion">
+            <img src="images/plus-shape.svg" class="plus-shape" alt="plus-shape">
+            How to contact with riders emergency ?
+        </button>
+        <div class="panel">
+            <p class="panel-text">
+              Get your blood tests delivered at the home collect a sample from
+              management news. Get your <br/>
+              blood tests delivered at the home collect a sample from management
+              news. Get your blood <br/>
+              tests delivered at the home collect a sample from management news.
+              Get your blood tests <br/>
+              delivered at the home.
+            </p>
+        </div>
+
+        <button class="accordion">
+            <img src="images/plus-shape.svg" class="plus-shape" alt="plus-shape">
+            <!-- <img src="images/minus-shape.svg" class="minus-shape" alt="plus-shape"> -->
+            App installation failed, how to update system information?
+        </button>
+        <div class="panel">
+            <p class="panel-text">
+              Get your blood tests delivered at the home collect a sample from
+              management news. Get your <br/>
+              blood tests delivered at the home collect a sample from management
+              news. Get your blood <br/>
+              tests delivered at the home collect a sample from management news.
+              Get your blood tests <br/>
+              delivered at the home.
+            </p>
+        </div>
+
+        <button class="accordion">
+            <img src="images/plus-shape.svg" class="plus-shape" alt="plus-shape">
+            Website reponse taking time, how to improve?
+        </button>
+        <div class="panel">
+            <p class="panel-text">
+              Get your blood tests delivered at the home collect a sample from
+              management news. Get your <br/>
+              blood tests delivered at the home collect a sample from management
+              news. Get your blood <br/>
+              tests delivered at the home collect a sample from management news.
+              Get your blood tests <br/>
+              delivered at the home.
+            </p>
+        </div>
+
+        <button class="accordion">
+            <img src="images/plus-shape.svg" class="plus-shape" alt="plus-shape">
+            New update fixed all bug and issues
+        </button>
+        <div class="panel">
+            <p class="panel-text">
+              Get your blood tests delivered at the home collect a sample from
+              management news. Get your <br/>
+              blood tests delivered at the home collect a sample from management
+              news. Get your blood <br/>
+              tests delivered at the home collect a sample from management news.
+              Get your blood tests <br/>
+              delivered at the home.
+            </p>
+        </div>
+    </div>
+
+
+
+<script>
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+    });
+    }
+</script>
+</body>
+</html>
