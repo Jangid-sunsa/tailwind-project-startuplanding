@@ -35,7 +35,7 @@ function addRealTimeValidation() {
 
   nameInput.addEventListener("input", () => {
     const nameErr = document.getElementById("name-error");
-    const val = nameInput.value; 
+    const val = nameInput.value;
     if (val === "" || /[\d!@#$%^&*(),.?":{}|<>_\-+=\\\/~`[\];']/g.test(val)) {
       nameErr.textContent = "Please enter your name properly.";
     } else {
@@ -76,19 +76,22 @@ function addRealTimeValidation() {
     }
   });
 
-const genderErr = document.getElementById("gender-error");
+  const genderErr = document.getElementById("gender-error");
 
-genderInput.addEventListener("input", () => {
-  const genderVal = genderInput.value.trim().toLowerCase();
-  if (genderVal === "male" || genderVal === "female" || genderVal === "other") {
-    genderErr.textContent = "";
-  } else if (genderInput.value === "") {
-    genderErr.textContent = ""; 
-  } else {
-    genderErr.textContent = "Please select Male, Female, or Other.";
-  }
-});
-
+  genderInput.addEventListener("input", () => {
+    const genderVal = genderInput.value.trim().toLowerCase();
+    if (
+      genderVal === "male" ||
+      genderVal === "female" ||
+      genderVal === "other"
+    ) {
+      genderErr.textContent = "";
+    } else if (genderInput.value === "") {
+      genderErr.textContent = "";
+    } else {
+      genderErr.textContent = "Please select Male, Female, or Other.";
+    }
+  });
 
   cityInput.addEventListener("input", () => {
     const cityErr = document.getElementById("city-error");
@@ -381,17 +384,33 @@ function displayData() {
 
     row.innerHTML = `
     <td class="text-center border border-black p-1">${index + 1}</td>
-      <td class="capitalize text-start border border-black p-1">${item.Name}</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.Name
+      }</td>
       <td class="text-start border border-black p-1">${item.Email}</td>
       <td class="text-start border border-black p-1">${item.Phone}</td>
       <td class="text-start border border-black p-1">${item.DOB}</td>
-      <td class="capitalize text-start border border-black p-1">${item.Gender}</td>
-      <td class="capitalize text-start border border-black p-1">${item.City}</td>
-      <td class="capitalize text-start border border-black p-1">${item.State}</td>
-      <td class="capitalize text-start border border-black p-1">${item.Country}</td>
-      <td class="capitalize text-start border border-black p-1">${item.Address}</td>
-      <td class="capitalize text-start border border-black p-1">${item.Message}</td>
-      <td class="capitalize text-start border border-black p-1">${item.FileName}</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.Gender
+      }</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.City
+      }</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.State
+      }</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.Country
+      }</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.Address
+      }</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.Message
+      }</td>
+      <td class="capitalize text-start border border-black p-1">${
+        item.FileName
+      }</td>
       <td class="text-start border border-black p-1">
         <button type="button" onclick="editRow(${index})"><i class="fa-solid fa-pen-to-square text-2xl px-2 active:text-blue-600 cursor-pointer"></i></button>
         <button type="button" onclick="deleteRow(${index})"><i class="fa-solid fa-trash text-2xl px-2 active:text-red-600 cursor-pointer"></i></button>
@@ -416,6 +435,9 @@ function editRow(index) {
   document.getElementById("faddress").value = data.Address;
   document.getElementById("fmssg").value = data.Message;
   document.getElementById("file").file = data.FileInput;
+  document.getElementById("fyes").checked = data.Counseling === "Yes";
+  document.getElementById("fno").checked = data.Counseling === "No";
+  document.getElementById("checkbox").checked = data.Checked;
 
   editIndex = index;
 }
